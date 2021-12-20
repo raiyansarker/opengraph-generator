@@ -19,6 +19,9 @@
 	export let avatar = '/avatar.jpg';
 </script>
 
+<svelte:head>
+	<title>OG Template</title>
+</svelte:head>
 <div class="grid grid-cols-1 grid-rows-6 w-screen h-screen overflow-hidden">
 	<div class="row-span-5 w-10/12 mx-auto grid place-items-center h-full">
 		<h1 class="text-5xl leading-snug tracking-wider text-center font-bold line-clamp-4">
