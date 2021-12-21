@@ -15,12 +15,24 @@
 <script>
 	export let title =
 		'This is just a demo title if no title is specified. Add title as the query parameter in the url to get title shown here!';
-	export let author = 'Demo Author';
+	export let author = 'Elon Musk';
 	export let avatar = '/avatar.jpg';
 </script>
 
 <svelte:head>
 	<title>OG Template</title>
+	<meta property="og:title" content="OG Image Template" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://og-template.raiyansarker.com" />
+	<meta property="og:image" content="https://og-template.raiyansarker.com/social.png" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="1280" />
+	<meta property="og:image:height" content="720" />
+	<meta property="og:image:alt" content="OG Template" />
+	<meta
+		property="og:image:description"
+		content="This is just a og image template which will get screenshoted and uploaded to media file server"
+	/>
 </svelte:head>
 <div class="grid grid-cols-1 grid-rows-6 w-screen h-screen overflow-hidden">
 	<div class="row-span-5 w-10/12 mx-auto grid place-items-center h-full">
