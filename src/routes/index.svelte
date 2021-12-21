@@ -36,22 +36,22 @@
 </svelte:head>
 <div class="grid grid-cols-1 grid-rows-6 w-screen h-screen overflow-hidden">
 	<div class="row-span-5 w-10/12 mx-auto grid place-items-center h-full">
-		<h1 class="text-5xl leading-snug tracking-wider text-center font-bold line-clamp-4">
+		<h1 class="text-5xl leading-snug tracking-wider text-center font-bold line-clamp-3">
 			{title}
 		</h1>
 	</div>
 	<div class="row-span-5">
-		<div class="px-10 flex items-center h-full">
+		<div class="px-16 flex items-start h-full">
 			<div class="flex justify-between items-center w-full">
 				<div class="flex gap-x-3 items-center">
 					<img
 						src={avatar}
 						alt="Avatar"
-						class="w-14 h-14 rounded-full object-cover ring-2 ring-slate-900"
+						class="w-16 h-16 rounded-full object-cover ring-2 ring-slate-900"
 					/>
-					<h1 class="text-3xl font-bold text-slate-800">{author}</h1>
+					<h1 class="text-4xl font-bold text-slate-800">{author}</h1>
 				</div>
-				<h1 class="text-5xl text-slate-500 font-bold">Raiyan Sarker Blog</h1>
+				<h1 class="text-6xl text-slate-500 font-bold">Raiyan Sarker Blog</h1>
 			</div>
 		</div>
 	</div>
