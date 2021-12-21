@@ -23,8 +23,8 @@
 	<title>OG Template</title>
 	<meta property="og:title" content="OG Image Template" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://og-template.raiyansarker.com" />
-	<meta property="og:image" content="https://og-template.raiyansarker.com/social.png" />
+	<meta property="og:url" content="https://og-template.pages.dev" />
+	<meta property="og:image" content="https://og-template.pages.dev/social.png" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1280" />
 	<meta property="og:image:height" content="720" />
