@@ -20,7 +20,7 @@ const upload = async (key = `tmp-${Date.now()}.webp`, body = null) => {
 
   const params = {
     Bucket: bucketName,
-    Key: `og-thumbnail/${key}`,
+    Key: `thumbnail/${key}`,
     Body: file,
     ACL: 'public-read',
     ContentType: 'image/webp',
