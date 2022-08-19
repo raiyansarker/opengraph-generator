@@ -20,12 +20,12 @@
 </svelte:head>
 <div class="grid grid-cols-1 grid-rows-6 w-screen h-screen overflow-hidden">
 	<div class="row-span-5 w-8/12 mx-auto grid place-items-center h-full">
-		<h1 class="text-4xl leading-snug tracking-wider text-center font-bold line-clamp-3">
+		<h1 class="text-5xl leading-snug tracking-wider text-center font-bold line-clamp-3">
 			{title}
 		</h1>
 	</div>
 	<div class="row-span-5">
-		<div class="px-40 flex items-start h-full">
+		<div class="px-20 flex items-start h-full">
 			<div class="flex justify-between items-center w-full">
 				<div class="flex gap-x-3 items-center">
 					<img
@@ -35,7 +35,7 @@
 					/>
 					<h1 class="text-4xl font-bold text-slate-800">{author}</h1>
 				</div>
-				<h1 class="text-5xl text-slate-500 font-bold">Raiyan Sarker Blog</h1>
+				<h1 class="text-6xl text-slate-500 font-bold">Raiyan Sarker Blog</h1>
 			</div>
 		</div>
 	</div>
