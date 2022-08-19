@@ -7,7 +7,7 @@
   "dependencies": {
     "aws-sdk": "^2.1198.0",
     "chrome-aws-lambda": "^10.1.0",
-    "puppeteer-core": "^16.2.0",
+    "puppeteer-core": "^10.1.0",
     "slugify": "^1.6.5"
   }
 }

@@ -45,7 +45,6 @@ const handler = async (event) => {
       await page.screenshot({
         path: tmpFileName,
         type: 'webp',
-        quality: 70,
         fullPage: true,
       });
       await browser.close();
