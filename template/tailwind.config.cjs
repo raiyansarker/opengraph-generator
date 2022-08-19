@@ -1,7 +1,8 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{svelte,js}'],
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {}
 	},
-	plugins: [require('@tailwindcss/line-clamp')]
+	plugins: []
 };

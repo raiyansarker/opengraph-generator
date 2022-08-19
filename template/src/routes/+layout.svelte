@@ -1,10 +1,10 @@
+<script>
+	import '../app.css';
+</script>
+
 <slot />
 
-<style lang="postcss">
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
-
+<style>
 	@font-face {
 		font-family: 'Custom';
 		font-style: normal;

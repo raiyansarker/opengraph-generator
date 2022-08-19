@@ -1,22 +1,6 @@
-<script context="module">
-	export const ssr = true;
-
-	export function load({ page: { query } }) {
-		return {
-			props: {
-				title: query.get('title') === null ? undefined : query.get('title'),
-				author: query.get('author') === null ? undefined : query.get('author'),
-				avatar: query.get('avatar') === null ? undefined : query.get('avatar')
-			}
-		};
-	}
-</script>
-
 <script>
-	export let title =
-		'This is just a demo title if no title is specified. Add title as the query parameter in the url to get title shown here!';
-	export let author = 'Elon Musk';
-	export let avatar = '/avatar.jpg';
+	export let data;
+	const { title, author, avatar } = data;
 </script>
 
 <svelte:head>
