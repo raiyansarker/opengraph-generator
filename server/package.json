@@ -1,13 +1,21 @@
 {
-  "name": "server",
+  "name": "thumbnail-generator",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Raiyan Sarker",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "aws-sdk": "^2.1198.0",
-    "chrome-aws-lambda": "^10.1.0",
-    "puppeteer-core": "^10.1.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "puppeteer": "^16.2.0",
     "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
