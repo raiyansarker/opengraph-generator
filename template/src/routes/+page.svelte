@@ -25,7 +25,7 @@
 		</h1>
 	</div>
 	<div class="row-span-5">
-		<div class="px-48 flex items-start h-full">
+		<div class="px-40 flex items-start h-full">
 			<div class="flex justify-between items-center w-full">
 				<div class="flex gap-x-3 items-center">
 					<img
