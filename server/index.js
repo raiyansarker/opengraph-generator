@@ -36,7 +36,7 @@ app.post('/generate', async (req, res) => {
       },
     });
     await page.goto(construcURL, {
-      waitUntil: 'networkidle2',
+      waitUntil: 'networkidle0',
     });
 
     const tmpFileName = `tmp-${Date.now()}.webp`;
@@ -56,7 +56,7 @@ app.post('/generate', async (req, res) => {
       message: 'Upload successful',
       file: {
         url: data.Location,
-        etag: data.ETag,
+        etag: data.ETag.substring(1, data.ETag.length - 1),
       },
     });
   } else {
