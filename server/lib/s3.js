@@ -3,11 +3,12 @@ const fs = require('fs');
 
 const bucketName = process.env.BUCKET_NAME;
 const region = process.env.REGION;
-// const endpoint = process.env.ENDPOINT
+const endpoint = process.env.ENDPOINT;
 const accessKey = process.env.ACCESS_KEY;
 const secretKey = process.env.SECRET_KEY;
 
 const s3 = new S3({
+  endpoint,
   accessKeyId: accessKey,
   secretAccessKey: secretKey,
   region,

@@ -55,7 +55,7 @@ app.post('/generate', async (req, res) => {
       status: 201,
       message: 'Upload successful',
       file: {
-        url: data.Location,
+        url: data.Location.replace(`${new URL(data.Location).hostname}/`, ''),
         etag: data.ETag.substring(1, data.ETag.length - 1),
       },
     });
