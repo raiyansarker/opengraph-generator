@@ -9,11 +9,10 @@
     "dev": "nodemon index.js"
   },
   "dependencies": {
-    "aws-sdk": "^2.1198.0",
+    "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "puppeteer": "^16.2.0",
-    "slugify": "^1.6.5"
+    "puppeteer": "^16.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
