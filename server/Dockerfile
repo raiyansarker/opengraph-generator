@@ -1,3 +1,10 @@
 FROM node:16-alpine3.16
-RUN yarn install --production
-CMD ["node", "./index.js"]
+
+WORKDIR /app
+
+COPY package.json /app
+COPY yarn.lock /app
+RUN yarn
+
+COPY . /app
+CMD ["npm", "start"]
