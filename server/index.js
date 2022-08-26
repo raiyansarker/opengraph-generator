@@ -38,7 +38,6 @@ app.get('/blog/:slug', async (req, res) => {
     avatarURL
   )}&title=${encodeURIComponent(title)}&author=${encodeURIComponent(name)}`;
   const browser = await puppeteer.launch({
-    executablePath: process.env.EXEC_PATH || '/usr/bin/google-chrome',
     args: ['--no-sandbox'],
     headless: true,
   });
