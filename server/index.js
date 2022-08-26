@@ -7,14 +7,10 @@ const app = express();
 
 app.use(express.json());
 
-app.get('/favicon.ico', (req, res) => {
-  res.status(206);
-});
-
-app.get('/:title', async (req, res) => {
+app.get('/blog/:slug', async (req, res) => {
   const {
     data: { data: info },
-  } = await getPostBySlug(req.params.title);
+  } = await getPostBySlug(req.params.slug);
 
   if (info.post === null) {
     return res.json({
@@ -93,6 +89,12 @@ app.get('/:title', async (req, res) => {
   res.status(200);
   res.setHeader('Content-Type', `image/png`);
   res.end(image);
+});
+
+app.get('/health-check', (req, res) => {
+  res.status(200).json({
+    status: 'OK 😀',
+  });
 });
 
 app.all('*', (req, res) => {
