@@ -1,4 +1,4 @@
-FROM alekzonder/puppeteer:latest
+FROM itisfoundation/puppeteer:14-3
 
 WORKDIR /app
 
