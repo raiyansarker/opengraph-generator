@@ -1,11 +1,18 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const { getPostBySlug } = require('./lib/api');
 const puppeteer = require('puppeteer');
 
 const app = express();
 
+app.disable('x-powered-by');
 app.use(express.json());
+app.use(
+  cors({
+    origin: '*',
+  })
+);
 
 app.get('/blog/:slug', async (req, res) => {
   const {
@@ -32,13 +39,18 @@ app.get('/blog/:slug', async (req, res) => {
   let avatarURL = url;
 
   if (!foundAvatar || url.includes('gravatar'))
-    avatarURL = 'https://media.raiyansarker.com/avatar/default.png';
+    avatarURL = process.env.DEFAULT_AVATAR_URL;
 
   const construcURL = `${process.env.TEMPLATE_URL}/?avatar=${encodeURIComponent(
     avatarURL
   )}&title=${encodeURIComponent(title)}&author=${encodeURIComponent(name)}`;
   const browser = await puppeteer.launch({
-    args: ['--no-sandbox'],
+    args: [
+      '--no-sandbox',
+      '--disable-gpu',
+      '--disable-dev-shm-usage',
+      '--disable-setuid-sandbox',
+    ],
     headless: true,
   });
   const page = await browser.newPage();
