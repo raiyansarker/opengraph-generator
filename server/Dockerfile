@@ -1,5 +1,4 @@
 FROM node:16
-WORKDIR /app
 
 RUN apt-get update && apt-get install -y gconf-service libasound2 libatk1.0-0 \
   libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 \
@@ -8,8 +7,6 @@ RUN apt-get update && apt-get install -y gconf-service libasound2 libatk1.0-0 \
   libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation \
   libappindicator1 libnss3 lsb-release xdg-utils wget
 
-COPY package.json .
-COPY yarn.lock  .
 RUN yarn install --production
 
 RUN chmod -R o+rwx node_modules/puppeteer/.local-chromium
