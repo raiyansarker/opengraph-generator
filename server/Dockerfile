@@ -9,6 +9,4 @@ RUN apt-get update && apt-get install -y gconf-service libasound2 libatk1.0-0 \
 
 RUN yarn install --production
 
-RUN chmod -R o+rwx node_modules/puppeteer/.local-chromium
-
 CMD [ "yarn", "start" ]
