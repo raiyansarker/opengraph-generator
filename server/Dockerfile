@@ -7,6 +7,10 @@ RUN apt-get update && apt-get install -y gconf-service libasound2 libatk1.0-0 \
   libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation \
   libappindicator1 libnss3 lsb-release xdg-utils wget
 
+WORKDIR /app
+
+COPY . .
+
 RUN yarn install --production
 
-CMD [ "yarn", "start" ]
+CMD [ "node", "/app/index.js" ]
