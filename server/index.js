@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const { getPostBySlug } = require('./lib/api');
 const puppeteer = require('puppeteer-core');
 
@@ -20,12 +21,10 @@ app.get('/blog/:slug', async (req, res) => {
   } = await getPostBySlug(req.params.slug);
 
   if (info.post === null) {
-    return res.json({
-      error: 'Wrong details',
-      message: 'Why are you here?',
-    });
+    return res.sendFile(path.join(__dirname, 'assets/default.png'));
   }
 
+  // This uses WP Graphql Schema
   const {
     title,
     author: {
@@ -120,12 +119,7 @@ app.get('/health-check', (req, res) => {
 });
 
 app.all('*', (req, res) => {
-  res.status(403).json({
-    status: 403,
-    error: {
-      message: 'You are not invited here.',
-    },
-  });
+  res.sendFile(path.join(__dirname, 'assets/default.png'));
 });
 
 const PORT = process.env.PORT || 8000;
