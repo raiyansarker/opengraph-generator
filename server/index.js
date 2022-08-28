@@ -118,6 +118,10 @@ app.get('/health-check', (req, res) => {
   });
 });
 
+app.get('/favicon.ico', (req, res) => {
+  res.sendStatus(204);
+});
+
 app.all('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'assets/default.png'));
 });
